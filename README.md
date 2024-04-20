@@ -5,6 +5,37 @@ This snapshot is based on the specific Ising model instances found in the `data`
 Snapshots of unprocessed experimental output are provided in the subdirectories of `results`.
 Finally, various postprocessing utilities are provided in the `scripts` directory.
 
+## Instances
+
+First, to uncompress all Ising model instance data, execute
+```bash
+find data/instances/ -name "*.zip" -exec sh -c 'unzip -o "{}" -d "$(dirname "{}")"' \;
+```
+
+## Results
+
+To uncompress all solver benchmarking results, execute
+```bash
+find data/results/ -name "*.zip" -exec sh -c 'unzip -o "{}" -d "$(dirname "{}")"' \;
+```
+
+### Subdirectory Naming
+
+- `grd_dwave_*`
+- `grd_scd_*`
+- `ilp_gurobi_*`
+- `iqp_cplex_*`
+- `iqp_gurobi_*`
+- `iqp_gurobipar_*`
+- `mcmc_gd_*`
+- `mp_ms_*`
+- `pt_par_*`
+- `pt_par_betamax_8_*`
+- `qa0625_dwave_*`
+- `sa_dwave_*`
+- `svmc_par_*`
+- `tabu_dwave_*`
+
 ## Citing
 
 If you have found this repository useful in your work, please cite [the corresponding article](https://arxiv.org/pdf/2210.04291.pdf):
