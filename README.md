@@ -12,6 +12,13 @@ First, to uncompress all Ising model instance data, execute
 find data/instances/ -name "*.zip" -exec sh -c 'unzip -o "{}" -d "$(dirname "{}")"' \;
 ```
 
+Each instance is stored in a directory corresponding to its lattice size and suffixed with an index ranging from 1 to 50.
+For example, `data/instances/Pegasus-Lattice_Size-2/Pegasus-Lattice_Size-2_00036.json` corresponds to the 36th generated Ising model instance with a lattice size of two.
+Each Ising model instance is stored in a JSON-based encoding of a binary quadratic program.
+This format is named `bqpjson`.
+A detailed description of the `bqpjson` format is available [here](http://bqpjson.readthedocs.io/en/latest/bqpjson_format.html).
+
+
 ## Results
 
 To uncompress all solver benchmarking results, execute
