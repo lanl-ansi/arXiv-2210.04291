@@ -61,12 +61,12 @@ source venv/bin/activate
 pip install -r scripts/requirements.txt
 ```
 
-### Parsing Instances
+### Working with Instances
 
-The `scripts/evaluate_random_solution.py` script demonstrates how to (i) parse an Ising model instance from a `bqpjson` file, (ii) generate a random assignment of spins, and (iii) evaluate the energy of the assignment.
-As an example, to evaluate the energy of a random assignment for the 36th Ising model instance with a lattice size of two, execute
+The `scripts/sample_random.py` script demonstrates how to (i) parse an Ising model instance from a `bqpjson` file, (ii) randomly sample assignments of spins, and (iii) evaluate the energy of each assignment.
+As an example, to randomly sample 42 assigments for the 36th Ising model instance with a lattice size of two, execute
 ```bash
-python3 scripts/evaluate_random_solution.py -i data/instances/Pegasus-Lattice_Size-2/Pegasus-Lattice_Size-2_00036.json
+python3 scripts/sample_random.py -i data/instances/Pegasus-Lattice_Size-2/Pegasus-Lattice_Size-2_00036.json -n 42
 ```
 
 ### Postprocessing Results

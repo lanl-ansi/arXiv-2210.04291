@@ -5,9 +5,9 @@ import json
 import random
 
 
-def evaluate_random_solution(input_path: str):
+def sample_random(input_path: str, num_reads: int):
     """
-    Load an Ising instance from a JSON file and evaluate a random solution.
+    Load an Ising instance from a JSON file and sample random assignments.
     """
 
     # Check for existence of the input file.
@@ -28,14 +28,21 @@ def evaluate_random_solution(input_path: str):
     # Get the set of all variable ids.
     variable_ids = set(data["variable_ids"])
 
-    # Generate a random assignment of spins.
-    assignment = {vid: random.choice([1, -1]) for vid in variable_ids}
+    # Initialize the energy of an assignment of all spins to one.
+    min_energy = _compute_energy(data, {vid: 1 for vid in variable_ids})
 
-    # Compute the energy of the assignment.
-    energy = _compute_energy(data, assignment)
+    for _ in range(num_reads):
+        # Generate a random assignment of spins.
+        assignment = {vid: random.choice([1, -1]) for vid in variable_ids}
 
-    # Print the energy of the assignment.
-    print(f"Energy: {energy}")
+        # Compute the energy of the assignment.
+        energy = _compute_energy(data, assignment)
+
+        # Update the minimum energy.
+        min_energy = min(min_energy, energy)
+
+    # Print the best energy discovered from sampling.
+    print(f"Best energy found: {min_energy}")
 
 
 def _compute_energy(data: dict, assignment: dict) -> float:
@@ -59,5 +66,6 @@ def _compute_energy(data: dict, assignment: dict) -> float:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("-i", "--input_path", help="path to instance", required=True)
+    parser.add_argument("-n", "--num_reads", help="number of random assignments", required=True)
     args = parser.parse_args()
-    evaluate_random_solution(args.input_path)
+    sample_random(args.input_path, int(args.num_reads))
