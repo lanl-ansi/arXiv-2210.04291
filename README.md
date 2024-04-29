@@ -56,10 +56,18 @@ A small number of helpful Python scripts are provided in the `scripts` directory
 These utilities assume that the user has Python 3.7 or later installed on their system.
 First, to install the necessary Python dependencies, execute
 ```bash
+python3 -m venv venv
+source venv/bin/activate
 pip install -r scripts/requirements.txt
 ```
 
 ### Parsing Instances
+
+The `scripts/evaluate_random_solution.py` script demonstrates how to (i) parse an Ising model instance from a `bqpjson` file, (ii) generate a random assignment of spins, and (iii) evaluate the energy of the assignment.
+As an example, to evaluate the energy of a random assignment for the 36th Ising model instance with a lattice size of two, execute
+```bash
+python3 scripts/evaluate_random_solution.py -i data/instances/Pegasus-Lattice_Size-2/Pegasus-Lattice_Size-2_00036.json
+```
 
 ### Postprocessing Results
 
