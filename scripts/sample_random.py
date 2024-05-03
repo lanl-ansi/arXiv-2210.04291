@@ -3,6 +3,7 @@ import os
 import bqpjson
 import json
 import random
+import tqdm
 
 
 def sample_random(input_path: str, num_reads: int):
@@ -31,7 +32,7 @@ def sample_random(input_path: str, num_reads: int):
     # Initialize the energy of an assignment of all spins to one.
     min_energy = _compute_energy(data, {vid: 1 for vid in variable_ids})
 
-    for _ in range(num_reads):
+    for _ in tqdm.tqdm(range(num_reads)):
         # Generate a random assignment of spins.
         assignment = {vid: random.choice([1, -1]) for vid in variable_ids}
 

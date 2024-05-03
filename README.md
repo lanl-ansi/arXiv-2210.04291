@@ -3,7 +3,7 @@
 The software and data in this repository comprise a snapshot of artifacts used in the production of the article [_On the Emerging Potential of Quantum Annealing Hardware for Combinatorial Optimization_](https://arxiv.org/pdf/2210.04291.pdf) by B. Tasseff, T. Albash, Z. Morrell, M. Vuffray, A. Y. Lokhov, S. Misra, and C. Coffrin.
 This snapshot is based on the specific Ising model instances found in the `data` directory.
 Snapshots of unprocessed experimental output are provided in the subdirectories of `results`.
-Finally, various postprocessing utilities are provided in the `scripts` directory.
+Finally, example utilities for processing instance and result data are provided in the `scripts` directory.
 
 ## Instances
 
@@ -66,15 +66,33 @@ pip install -r scripts/requirements.txt
 The `scripts/sample_random.py` script demonstrates how to (i) parse an Ising model instance from a `bqpjson` file, (ii) randomly sample assignments of spins, and (iii) evaluate the energy of each assignment.
 As an example, to randomly sample 42 assigments for the 36th Ising model instance with a lattice size of two, execute
 ```bash
-python3 scripts/sample_random.py -i data/instances/Pegasus-Lattice_Size-2/Pegasus-Lattice_Size-2_00036.json -n 42
+python3 scripts/sample_random.py \
+        -i data/instances/Pegasus-Lattice_Size-2/Pegasus-Lattice_Size-2_00036.json \
+        -n 42
 ```
 
 ### Postprocessing Results
 
+The `scripts/tabulate_best_energies.py` script demonstrates how to (i) parse a log file to determine the solve time, total wall-clock time, and best energy discovered; (ii) construct a dataframe that tabulates these data over all instances and solver runs; and (iii) create a dataframe summarizing the best energy found for each instance and solver.
+As an example, to tabulate the best energies found for all results for instances with a lattice size of 16, execute
+```bash
+python3 scripts/tabulate_best_energies.py \
+        -i data/results/Pegasus-Lattice_Size-16 \
+        -o Pegasus-Lattice_Size-16-Energy_Summary.csv
+```
+A comma-separated value (CSV) file named `Pegasus-Lattice_Size-16-Energy_Summary.csv` will be created in the current working directory.
+
+The `scripts/evaluate_assignment.py` script demonstrates how to (i) extract the assignment of spins from a log file, (ii) parse an Ising model instance from a `bqpjson` file, and (iii) evaluate the energy of the assignment.
+As an example, to evaluate the energy of the assignment found by the `svmc_par_8192000` solver parameterization for the 36th Ising model instance with a lattice size of 16, execute
+```bash
+python3 scripts/evaluate_assignment.py \
+        -i data/instances/Pegasus-Lattice_Size-16/Pegasus-Lattice_Size-16_00036.json \
+        -r data/results/Pegasus-Lattice_Size-16/svmc_par_8192000/Pegasus-Lattice_Size-16/Pegasus-Lattice_Size-16_00036.stdout
+```
+
 ## Citing
 
 If you have found this repository useful in your work, please cite [the corresponding article](https://arxiv.org/pdf/2210.04291.pdf):
-Below is a BibTeX entry that may be used:
 ```
 @misc{tasseff+:arxiv22,
   title         = {On the Emerging Potential of Quantum Annealing Hardware for Combinatorial Optimization},
