@@ -1,8 +1,8 @@
 # on-the-emerging-potential-of-quantum-annealing-hardware 
 
-The software and data in this repository comprise a snapshot of artifacts used in the production of the article [_On the Emerging Potential of Quantum Annealing Hardware for Combinatorial Optimization_](https://arxiv.org/pdf/2210.04291.pdf) by B. Tasseff, T. Albash, Z. Morrell, M. Vuffray, A. Y. Lokhov, S. Misra, and C. Coffrin.
-This snapshot is based on the specific Ising model instances found in the `data` directory.
-Snapshots of unprocessed experimental output are provided in the subdirectories of `results`.
+The data in this repository comprise a snapshot of artifacts used in the production of the article [_On the Emerging Potential of Quantum Annealing Hardware for Combinatorial Optimization_](https://arxiv.org/pdf/2210.04291.pdf) by B. Tasseff, T. Albash, Z. Morrell, M. Vuffray, A. Y. Lokhov, S. Misra, and C. Coffrin.
+This snapshot is based on the specific Ising model instances found in the `data/instances` directory.
+Snapshots of unprocessed experimental output are provided in the subdirectories of `data/results`.
 Finally, example utilities for processing instance and result data are provided in the `scripts` directory.
 
 ## Instances
