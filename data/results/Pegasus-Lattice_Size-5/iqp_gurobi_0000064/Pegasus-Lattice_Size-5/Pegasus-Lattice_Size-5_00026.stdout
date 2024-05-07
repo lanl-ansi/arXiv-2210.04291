@@ -1,0 +1,71 @@
+Set parameter TSPort to value 51199
+Set parameter TokenServer to value "open-license1.lanl.gov"
+Set parameter TimeLimit to value 64
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2695 v4 @ 2.10GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 36 physical cores, 72 logical processors, using up to 1 threads
+
+Optimize a model with 0 rows, 383 columns and 0 nonzeros
+Model fingerprint: 0x435e4703
+Model has 1614 quadratic objective terms
+Variable types: 0 continuous, 383 integer (383 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [2e+00, 3e+01]
+  QObjective range [8e+00, 8e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective 0.0000000
+Found heuristic solution: objective -664.0000000
+Found heuristic solution: objective -2276.000000
+Found heuristic solution: objective -2292.000000
+Presolve time: 0.21s
+Presolved: 1614 rows, 1997 columns, 4842 nonzeros
+Variable types: 0 continuous, 1997 integer (1997 binary)
+
+Root relaxation: objective -3.058000e+03, 463 iterations, 0.01 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -3058.0000    0  383 -2292.0000 -3058.0000  33.4%     -    0s
+     0     0 -2782.0000    0  533 -2292.0000 -2782.0000  21.4%     -    0s
+     0     0 -2782.0000    0  533 -2292.0000 -2782.0000  21.4%     -    0s
+     0     0 -2721.5000    0  574 -2292.0000 -2721.5000  18.7%     -    0s
+     0     0 -2721.5000    0  566 -2292.0000 -2721.5000  18.7%     -    0s
+     0     2 -2721.5000    0  555 -2292.0000 -2721.5000  18.7%     -    0s
+   527   452 -2512.7953    7 1103 -2292.0000 -2512.7953  9.63%  84.4    5s
+   543   462 -2318.0000   71 1590 -2292.0000 -2450.2398  6.90%  81.9   10s
+   557   472 -2320.0000   71 1691 -2292.0000 -2423.9193  5.76%  79.9   15s
+   572   482 -2408.5520   43 1733 -2292.0000 -2408.5520  5.09%  77.8   20s
+   592   495 -2399.1592   39 1763 -2292.0000 -2399.1592  4.68%  75.2   25s
+   638   526 -2393.5693    5 1803 -2292.0000 -2393.5693  4.43%  69.7   30s
+   676   551 -2388.1117   19 1838 -2292.0000 -2388.1117  4.19%  65.8   35s
+   711   576 -2385.6819   21 1731 -2292.0000 -2385.6819  4.09%   206   42s
+   718   580 -2385.6819   55 1846 -2292.0000 -2385.6819  4.09%   204   45s
+   743   597 -2318.0000   71 1857 -2292.0000 -2382.2219  3.94%   197   50s
+   760   608 -2380.8494   32 1852 -2292.0000 -2380.8494  3.88%   193   55s
+   768   616 -2371.2567   26 1702 -2292.0000 -2377.7409  3.74%   263   60s
+
+Cutting planes:
+  Gomory: 15
+  MIR: 76
+  Flow cover: 641
+  Zero half: 271
+  RLT: 66
+  BQP: 96
+
+Explored 776 nodes (220386 simplex iterations) in 64.00 seconds (68.29 work units)
+Thread count was 1 (of 72 available processors)
+
+Solution count 4: -2292 -2276 -664 0 
+
+Time limit reached
+Best objective -2.292000000000e+03, best bound -2.376000000000e+03, gap 3.6649%
+
+User-callback calls 8511, time in user-callback 0.04 sec
+
+BQP_SOLUTION, 383, 1614, -848.000000, 64.000492, 1, 1, 1, -1, 1, 1, -1, -1, -1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, 1, -1, -1, -1, 1, -1, 1, -1, 1, -1, -1, -1, -1, -1, 1, -1, 1, 1, 1, -1, -1, -1, -1, -1, 1, -1, -1, -1, 1, -1, -1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, 1, 1, -1, -1, 1, 1, -1, 1, 1, 1, -1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, 1, -1, -1, 1, 1, -1, 1, 1, -1, -1, -1, 1, -1, -1, -1, 1, -1, 1, 1, 1, -1, -1, -1, 1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, -1, -1, 1, 1, 1, 1, 1, 1, 1, -1, 1, 1, 1, -1, 1, 1, 1, -1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, 1, 1, 1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, -1, -1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, 1, 1, -1, 1, 1, 1, 1, 1, 1, -1, 1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, -1, 1, 1, -1, -1, 1, 1, 1, -1, 1, 1, 1, -1, 1, 1, -1, -1, 1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, -1, 1, -1, 1, -1, 1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, 1, -1, 1, 1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, 1, -1, -1, 1, 1, -1, -1, 1, 1, -1, -1, 1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, -1, 1, 1, 1, -1
+BQP_DATA, 383, 1614, -848.000000, -932.000000, -2292.000000, -2376.000000, 64.000492, 1003, 776

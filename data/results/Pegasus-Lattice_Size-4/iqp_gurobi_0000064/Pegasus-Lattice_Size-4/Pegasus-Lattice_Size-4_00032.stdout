@@ -1,0 +1,73 @@
+Set parameter TSPort to value 51199
+Set parameter TokenServer to value "open-license1.lanl.gov"
+Set parameter TimeLimit to value 64
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2695 v4 @ 2.10GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 36 physical cores, 72 logical processors, using up to 1 threads
+
+Optimize a model with 0 rows, 215 columns and 0 nonzeros
+Model fingerprint: 0xf67e3503
+Model has 868 quadratic objective terms
+Variable types: 0 continuous, 215 integer (215 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [2e+00, 3e+01]
+  QObjective range [8e+00, 8e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective 0.0000000
+Found heuristic solution: objective -386.0000000
+Found heuristic solution: objective -1230.000000
+Found heuristic solution: objective -1248.000000
+Presolve removed 0 rows and 1 columns
+Presolve time: 0.26s
+Presolved: 867 rows, 1081 columns, 2601 nonzeros
+Variable types: 0 continuous, 1081 integer (1081 binary)
+
+Root relaxation: objective -1.641000e+03, 266 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -1641.0000    0  214 -1248.0000 -1641.0000  31.5%     -    0s
+     0     0 -1469.0000    0  306 -1248.0000 -1469.0000  17.7%     -    0s
+     0     0 -1469.0000    0  308 -1248.0000 -1469.0000  17.7%     -    0s
+     0     0 -1438.8333    0  348 -1248.0000 -1438.8333  15.3%     -    0s
+     0     0 -1438.8333    0  345 -1248.0000 -1438.8333  15.3%     -    0s
+     0     2 -1438.6667    0  340 -1248.0000 -1438.6667  15.3%     -    0s
+   556   485 -1319.0000   15  873 -1248.0000 -1328.3906  6.44%  83.8    5s
+   606   520 -1290.5602   18  791 -1248.0000 -1300.1979  4.18%   130   10s
+   701   558 -1288.9284   17  821 -1248.0000 -1298.1455  4.02%   176   15s
+   784   594 -1267.8691   25  696 -1248.0000 -1295.4668  3.80%   213   20s
+   900   618 -1280.7044   19  813 -1248.0000 -1292.6438  3.58%   235   25s
+   994   649 -1264.1623   25  732 -1248.0000 -1290.9020  3.44%   257   30s
+  1104   661 -1283.7007   18  811 -1248.0000 -1289.4559  3.32%   268   35s
+  1232   685 -1282.8016   18  836 -1248.0000 -1288.7289  3.26%   275   40s
+  1341   715 -1271.0053   23  701 -1248.0000 -1287.4678  3.16%   283   45s
+  1479   719 -1261.9282   25  737 -1248.0000 -1286.7160  3.10%   286   50s
+  1600   744 -1252.7492   32  691 -1248.0000 -1286.0869  3.05%   290   55s
+  1724   765     cutoff   34      -1248.0000 -1285.3276  2.99%   293   60s
+
+Cutting planes:
+  Gomory: 26
+  MIR: 55
+  Flow cover: 14
+  Zero half: 519
+  Mod-K: 1
+  RLT: 37
+  BQP: 53
+
+Explored 1818 nodes (538204 simplex iterations) in 64.00 seconds (61.17 work units)
+Thread count was 1 (of 72 available processors)
+
+Solution count 4: -1248 -1230 -386 0 
+
+Time limit reached
+Best objective -1.248000000000e+03, best bound -1.284000000000e+03, gap 2.8846%
+
+User-callback calls 8132, time in user-callback 0.03 sec
+
+BQP_SOLUTION, 215, 868, -475.000000, 64.000616, 1, 1, 1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, 1, 1, -1, 1, 1, -1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, 1, -1, 1, 1, -1, 1, 1, 1, 1, 1, -1, 1, 1, -1, 1, 1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, 1, -1, 1, 1, 1, 1, 1, -1, 1, 1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, 1, -1, -1, 1, -1, -1, 1, -1, 1, -1, -1, 1, 1, -1, 1, 1, -1, 1, 1, -1, 1, 1, -1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, 1, -1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, -1, 1, -1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, 1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, -1, -1, 1, -1, 1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, 1, -1, 1, 1, -1, 1, -1, 1, 1, 1, -1, -1, 1, -1
+BQP_DATA, 215, 868, -475.000000, -511.000000, -1248.000000, -1284.000000, 64.000616, 615, 1818

@@ -1,0 +1,53 @@
+Set parameter TSPort to value 51199
+Set parameter TokenServer to value "open-license1.lanl.gov"
+Set parameter TimeLimit to value 256
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2695 v4 @ 2.10GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 36 physical cores, 72 logical processors, using up to 1 threads
+
+Optimize a model with 0 rows, 24 columns and 0 nonzeros
+Model fingerprint: 0xce9da77e
+Model has 56 quadratic objective terms
+Variable types: 0 continuous, 24 integer (24 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [2e+00, 2e+01]
+  QObjective range [8e+00, 8e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective 0.0000000
+Found heuristic solution: objective -44.0000000
+Found heuristic solution: objective -114.0000000
+Presolve time: 0.00s
+Presolved: 56 rows, 80 columns, 168 nonzeros
+Variable types: 0 continuous, 80 integer (80 binary)
+
+Root relaxation: objective -1.240000e+02, 29 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -124.00000    0   24 -114.00000 -124.00000  8.77%     -    0s
+     0     0     cutoff    0      -114.00000 -114.00000  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 2
+  MIR: 4
+  Zero half: 7
+  RLT: 2
+
+Explored 1 nodes (52 simplex iterations) in 0.02 seconds (0.00 work units)
+Thread count was 1 (of 72 available processors)
+
+Solution count 3: -114 -44 0 
+No other solutions better than -114
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.140000000000e+02, best bound -1.140000000000e+02, gap 0.0000%
+
+User-callback calls 111, time in user-callback 0.00 sec
+
+BQP_SOLUTION, 24, 56, -46.000000, 0.018823, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1, 1
+BQP_DATA, 24, 56, -46.000000, -46.000000, -114.000000, -114.000000, 0.018823, 13, 1

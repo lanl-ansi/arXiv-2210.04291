@@ -1,0 +1,72 @@
+Set parameter TSPort to value 51199
+Set parameter TokenServer to value "open-license1.lanl.gov"
+Set parameter TimeLimit to value 64
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2695 v4 @ 2.10GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 36 physical cores, 72 logical processors, using up to 1 threads
+
+Optimize a model with 0 rows, 215 columns and 0 nonzeros
+Model fingerprint: 0xfd45dea8
+Model has 846 quadratic objective terms
+Variable types: 0 continuous, 215 integer (215 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [2e+00, 2e+01]
+  QObjective range [8e+00, 8e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective 0.0000000
+Found heuristic solution: objective -378.0000000
+Found heuristic solution: objective -1236.000000
+Found heuristic solution: objective -1238.000000
+Presolve time: 0.25s
+Presolved: 846 rows, 1061 columns, 2538 nonzeros
+Variable types: 0 continuous, 1061 integer (1061 binary)
+
+Root relaxation: objective -1.625000e+03, 250 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -1625.0000    0  215 -1238.0000 -1625.0000  31.3%     -    0s
+     0     0 -1466.0000    0  300 -1238.0000 -1466.0000  18.4%     -    0s
+     0     0 -1464.0000    0  301 -1238.0000 -1464.0000  18.3%     -    0s
+     0     0 -1433.0000    0  323 -1238.0000 -1433.0000  15.8%     -    0s
+     0     0 -1433.0000    0  323 -1238.0000 -1433.0000  15.8%     -    0s
+     0     2 -1432.0000    0  318 -1238.0000 -1432.0000  15.7%     -    0s
+   569   504 -1280.0000   30  894 -1238.0000 -1303.7904  5.31%  65.4    5s
+   626   543 -1289.6554   10  913 -1238.0000 -1289.6554  4.17%  95.1   10s
+*  688   554              59    -1242.000000 -1286.9002  3.62%   146   13s
+   709   559 -1262.2880   38  743 -1242.0000 -1286.8998  3.62%   159   15s
+   815   610 -1264.2909   37  743 -1242.0000 -1284.5205  3.42%   197   20s
+   945   676 -1251.7698   44  700 -1242.0000 -1282.0025  3.22%   221   25s
+  1093   685 -1270.7944   35  764 -1242.0000 -1279.1557  2.99%   232   30s
+  1201   731 -1266.7461   35  789 -1242.0000 -1278.5944  2.95%   255   35s
+  1330   756 -1269.1618   37  721 -1242.0000 -1278.2959  2.92%   263   40s
+  1465   802 -1264.8680   36  752 -1242.0000 -1277.2433  2.84%   270   45s
+  1602   823 -1256.2350   43  698 -1242.0000 -1276.3949  2.77%   274   50s
+  1786   839 -1272.8435   34  796 -1242.0000 -1275.8488  2.73%   271   55s
+  1924   867 -1260.5969   39  736 -1242.0000 -1275.2273  2.68%   274   60s
+
+Cutting planes:
+  Gomory: 20
+  MIR: 30
+  Flow cover: 22
+  Zero half: 424
+  RLT: 40
+  BQP: 62
+
+Explored 2032 nodes (562912 simplex iterations) in 64.00 seconds (60.42 work units)
+Thread count was 1 (of 72 available processors)
+
+Solution count 5: -1242 -1238 -1236 ... 0
+
+Time limit reached
+Best objective -1.242000000000e+03, best bound -1.274000000000e+03, gap 2.5765%
+
+User-callback calls 8941, time in user-callback 0.04 sec
+
+BQP_SOLUTION, 215, 846, -463.000000, 64.000488, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, -1, -1, -1, 1, -1, 1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, 1, -1, 1, 1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, -1, -1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, -1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, 1, 1, -1, 1, 1, 1, -1, 1, -1, 1, -1, 1, -1, 1, 1, -1, 1, 1, -1, -1, 1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, -1, 1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1, 1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, -1, -1, 1, -1, 1, -1, -1, 1, 1, -1
+BQP_DATA, 215, 846, -463.000000, -495.000000, -1242.000000, -1274.000000, 64.000488, 496, 2032

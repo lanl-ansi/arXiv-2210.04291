@@ -1,0 +1,60 @@
+Set parameter TSPort to value 51199
+Set parameter TokenServer to value "open-license1.lanl.gov"
+Set parameter TimeLimit to value 8
+Set parameter Threads to value 1
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2695 v4 @ 2.10GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 36 physical cores, 72 logical processors, using up to 1 threads
+
+Optimize a model with 0 rows, 215 columns and 0 nonzeros
+Model fingerprint: 0x6219f4f3
+Model has 825 quadratic objective terms
+Variable types: 0 continuous, 215 integer (215 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [2e+00, 2e+01]
+  QObjective range [8e+00, 8e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective 0.0000000
+Found heuristic solution: objective -342.0000000
+Found heuristic solution: objective -1154.000000
+Presolve removed 0 rows and 1 columns
+Presolve time: 0.24s
+Presolved: 824 rows, 1038 columns, 2472 nonzeros
+Variable types: 0 continuous, 1038 integer (1038 binary)
+
+Root relaxation: objective -1.529000e+03, 271 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -1529.0000    0  214 -1154.0000 -1529.0000  32.5%     -    0s
+     0     0 -1383.3333    0  301 -1154.0000 -1383.3333  19.9%     -    0s
+     0     0 -1380.0000    0  302 -1154.0000 -1380.0000  19.6%     -    0s
+     0     0 -1343.5000    0  330 -1154.0000 -1343.5000  16.4%     -    0s
+     0     0 -1343.5000    0  318 -1154.0000 -1343.5000  16.4%     -    0s
+     0     2 -1343.5000    0  315 -1154.0000 -1343.5000  16.4%     -    0s
+   564   504 -1224.1015    7  818 -1154.0000 -1224.1015  6.07%  70.6    5s
+
+Cutting planes:
+  Gomory: 23
+  MIR: 36
+  Flow cover: 30
+  Zero half: 411
+  RLT: 30
+  BQP: 51
+
+Explored 602 nodes (70502 simplex iterations) in 8.00 seconds (6.61 work units)
+Thread count was 1 (of 72 available processors)
+
+Solution count 3: -1154 -342 0 
+
+Time limit reached
+Best objective -1.154000000000e+03, best bound -1.210000000000e+03, gap 4.8527%
+
+User-callback calls 2977, time in user-callback 0.02 sec
+
+BQP_SOLUTION, 215, 825, -450.000000, 8.000570, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, -1, 1, -1, -1, 1, -1, -1, -1, 1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, 1, -1, -1, 1, -1, -1, 1, -1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, 1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, 1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, -1, 1, 1, -1, 1, 1, 1, 1, 1, -1, 1, 1, -1, 1, 1, -1, 1, 1, -1, 1, 1, -1, 1, 1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, 1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, -1, 1, 1, 1, 1, 1
+BQP_DATA, 215, 825, -450.000000, -506.000000, -1154.000000, -1210.000000, 8.000570, 500, 602

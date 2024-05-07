@@ -1,0 +1,29 @@
+using d-wave endpoint provided in data file: https://cloud.dwavesys.com/sapi
+using d-wave solver name provided in data file: Advantage_system4.1
+found d-wave chip id in data file: Advantage_system4.1
+d-wave parameters:
+  auto_scale - False
+  num_reads - 2560
+  num_spin_reversal_transforms - 25
+  annealing_time - 62.5
+-41.000000 - 2509
+-39.000000 - 2
+-39.000000 - 2
+-39.000000 - 9
+-39.000000 - 5
+-39.000000 - 9
+-37.000000 - 1
+-37.000000 - 1
+-37.000000 - 1
+-35.000000 - 4
+-35.000000 - 2
+-35.000000 - 2
+-35.000000 - 2
+-35.000000 - 3
+-35.000000 - 2
+-35.000000 - 3
+-35.000000 - 2
+-27.000000 - 1
+
+BQP_SOLUTION, 24, 61, -41.000000, 0.813715, 1, -1, 1, 1, 1, -1, 1, 1, 1, 1, 1, 1, -1, -1, -1, 1, -1, -1, 1, -1, 1, -1, -1, 1
+BQP_DATA, 24, 61, -41.000000, -83.000000, -41.000000, -83.000000, 0.813715, 0, 2560, 0.000626, 0.036032, 0.588214, 2.750460, 3.375332
