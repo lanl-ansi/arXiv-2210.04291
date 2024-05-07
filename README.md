@@ -7,11 +7,6 @@ Finally, example utilities for processing instance and result data are provided 
 
 ## Instances
 
-First, to uncompress all Ising model instance data, execute
-```bash
-find data/instances/ -name "*.zip" -exec sh -c 'unzip -o "{}" -d "$(dirname "{}")"' \;
-```
-
 Each instance is stored in a directory corresponding to its lattice size and suffixed with an index ranging from 1 to 50.
 For example, `data/instances/Pegasus-Lattice_Size-2/Pegasus-Lattice_Size-2_00036.json` corresponds to the 36th generated Ising model instance with a lattice size of two.
 Each Ising model instance is stored in a JSON-based encoding of a binary quadratic program.
@@ -21,16 +16,9 @@ A detailed description of the `bqpjson` format is available [here](http://bqpjso
 
 ## Results
 
-To uncompress all solver benchmarking results, execute
-```bash
-find data/results/ -name "*.zip" -exec sh -c 'unzip -o "{}" -d "$(dirname "{}")"' \;
-```
-
-### Subdirectory Naming
-
-Within each `Pegasus-Lattice_Size-*` directory, results are partitioned into subdirectories based on (i) the solution method employed (the prefix) and (ii) the time or iteration limit (the suffix).
-For example, the file `Pegasus-Lattice_Size-16/iqp_gurobi_0000064/Pegasus-Lattice_Size-16/Pegasus-Lattice_Size-16_00001.stdout` corresponds to the output from the `iqp_gurobi` solver for the first `Pegasus-Lattice_Size-16` instance when using a time limit of 64 seconds.
-Another example is `Pegasus-Lattice_Size-2/pt_par_0016384/Pegasus-Lattice_Size-2/Pegasus-Lattice_Size-2_00010.stdout`, which corresponds to the output from the `pt_par` (parallel tempering) solver for the tenth `Pegasus-Lattice_Size-2` instance when using 16,384 parallel tempering updates per run.
+Within each `data/results/Pegasus-Lattice_Size-*` directory, results are partitioned into subdirectories based on (i) the solution method employed (the prefix) and (ii) the time or iteration limit (the suffix).
+For example, the file `data/results/Pegasus-Lattice_Size-16/iqp_gurobi_0000064/Pegasus-Lattice_Size-16/Pegasus-Lattice_Size-16_00001.stdout` corresponds to the output from the `iqp_gurobi` solver for the first `Pegasus-Lattice_Size-16` instance when using a time limit of 64 seconds.
+Another example is `data/results/Pegasus-Lattice_Size-2/pt_par_0016384/Pegasus-Lattice_Size-2/Pegasus-Lattice_Size-2_00010.stdout`, which corresponds to the output from the `pt_par` (parallel tempering) solver for the tenth `Pegasus-Lattice_Size-2` instance when using 16,384 parallel tempering updates per run.
 More information on each solver and their possible parameterizations are described in the appendix of the article.
 Below, we briefly describe the solver prefixes and suffixes that appear in each subdirectory.
 Only a subset of these solvers is employed for instances with lattice sizes less than 16.
